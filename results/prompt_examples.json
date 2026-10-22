@@ -1,0 +1,32 @@
+[
+ {
+  "prompt": "Tu assistes une équipe de maintenance d'une usine automobile. Une anomalie a été détectée sur le flux vidéo d'un poste. Les deux images jointes montrent le poste avant et pendant l'événement.\nRègles : n'utilise que les mesures et la base de connaissances fournies ; si les images contredisent les mesures, dis-le ; ne propose aucune action dangereuse ; réponds en français, au format JSON demandé.\nMesures : {\"event_id\": 0, \"start_s\": 33.9, \"end_s\": 39.0, \"duration_s\": 5.1, \"detector_label\": null, \"top_measure\": \"speed\", \"excess_vs_normal_range\": 8.6, \"observation\": \"belt speed drops, conveyor stopped\"}\nBase de connaissances (extraits les plus proches) : [{\"kb_id\": \"KB-01\", \"title\": \"Arrêt du convoyeur\", \"causes\": [\"pièce coincée au transfert\", \"déclenchement du disjoncteur moteur\", \"capteur de sécurité ouvert\", \"courroie cassée\"], \"checks\": [\"vérifier le défaut affiché sur le pupitre\", \"inspecter le transfert en sortie de bande\", \"contrôler le disjoncteur Q3\"], \"urgency\": \"haute\", \"similarity\": 0.35}, {\"kb_id\": \"KB-02\", \"title\": \"Pièce mal orientée sur la bande\", \"causes\": [\"guide latéral déréglé\", \"éjection irrégulière du poste amont\", \"pièce déformée\"], \"checks\": [\"contrôler le réglage des guides\", \"observer la dépose au poste amont\", \"isoler la pièce pour contrôle\"], \"urgency\": \"moyenne\", \"similarity\": 0.02}]\n",
+  "offline_answer": {
+   "summary": "Arrêt du convoyeur détecté(e) de 34 s à 39 s : belt speed drops, conveyor stopped.",
+   "likely_cause": "pièce coincée au transfert",
+   "checks": [
+    "vérifier le défaut affiché sur le pupitre",
+    "inspecter le transfert en sortie de bande",
+    "contrôler le disjoncteur Q3"
+   ],
+   "urgency": "haute",
+   "kb_id": "KB-01",
+   "confidence_note": "similarité avec la fiche 0.35, réponse sans modèle de langage"
+  }
+ },
+ {
+  "prompt": "Tu assistes une équipe de maintenance d'une usine automobile. Une anomalie a été détectée sur le flux vidéo d'un poste. Les deux images jointes montrent le poste avant et pendant l'événement.\nRègles : n'utilise que les mesures et la base de connaissances fournies ; si les images contredisent les mesures, dis-le ; ne propose aucune action dangereuse ; réponds en français, au format JSON demandé.\nMesures : {\"event_id\": 1, \"start_s\": 56.1, \"end_s\": 62.3, \"duration_s\": 6.2, \"detector_label\": null, \"top_measure\": \"max_abs_angle\", \"excess_vs_normal_range\": 4.67, \"observation\": \"part rotated on the belt, angle out of tolerance\"}\nBase de connaissances (extraits les plus proches) : [{\"kb_id\": \"KB-02\", \"title\": \"Pièce mal orientée sur la bande\", \"causes\": [\"guide latéral déréglé\", \"éjection irrégulière du poste amont\", \"pièce déformée\"], \"checks\": [\"contrôler le réglage des guides\", \"observer la dépose au poste amont\", \"isoler la pièce pour contrôle\"], \"urgency\": \"moyenne\", \"similarity\": 0.52}, {\"kb_id\": \"KB-03\", \"title\": \"Corps étranger sur la bande\", \"causes\": [\"débris d'outillage\", \"chute d'un élément de fixation\", \"pièce d'une autre référence\"], \"checks\": [\"arrêter la bande et retirer l'objet\", \"identifier son origine\", \"vérifier les fixations au-dessus de la bande\"], \"urgency\": \"haute\", \"similarity\": 0.12}]\n",
+  "offline_answer": {
+   "summary": "Pièce mal orientée sur la bande détecté(e) de 56 s à 62 s : part rotated on the belt, angle out of tolerance.",
+   "likely_cause": "guide latéral déréglé",
+   "checks": [
+    "contrôler le réglage des guides",
+    "observer la dépose au poste amont",
+    "isoler la pièce pour contrôle"
+   ],
+   "urgency": "moyenne",
+   "kb_id": "KB-02",
+   "confidence_note": "similarité avec la fiche 0.52, réponse sans modèle de langage"
+  }
+ }
+]

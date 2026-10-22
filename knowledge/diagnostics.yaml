@@ -1,0 +1,38 @@
+# Small maintenance knowledge base used for assisted diagnosis. Illustrative content: a real deployment
+# would index the plant's own troubleshooting guides, work-order history and procedures.
+- id: KB-01
+  title: Arrêt du convoyeur
+  symptom: belt speed drops to zero, conveyor stopped, parts stop moving, jam, blocage, arrêt de la bande
+  causes: [pièce coincée au transfert, déclenchement du disjoncteur moteur, capteur de sécurité ouvert, courroie cassée]
+  checks: [vérifier le défaut affiché sur le pupitre, inspecter le transfert en sortie de bande, contrôler le disjoncteur Q3]
+  urgency: haute
+- id: KB-02
+  title: Pièce mal orientée sur la bande
+  symptom: part rotated on the belt, angle out of tolerance, misaligned part, skewed, pièce de travers
+  causes: [guide latéral déréglé, éjection irrégulière du poste amont, pièce déformée]
+  checks: [contrôler le réglage des guides, observer la dépose au poste amont, isoler la pièce pour contrôle]
+  urgency: moyenne
+- id: KB-03
+  title: Corps étranger sur la bande
+  symptom: unknown object on the belt, colour or shape not matching the part, hue off, foreign object, débris
+  causes: [débris d'outillage, chute d'un élément de fixation, pièce d'une autre référence]
+  checks: [arrêter la bande et retirer l'objet, identifier son origine, vérifier les fixations au-dessus de la bande]
+  urgency: haute
+- id: KB-04
+  title: Fumée ou vapeur au niveau de la machine
+  symptom: grey plume in front of the machine housing, machine area brighter, contrast change, smoke, fumée
+  causes: [échauffement d'un moteur ou d'une broche, fuite de liquide de coupe vaporisé, frottement anormal]
+  checks: [prévenir le chef d'équipe, contrôler la température par caméra thermique, vérifier l'aspiration]
+  urgency: critique
+- id: KB-05
+  title: Caméra masquée ou défaillante
+  symptom: image dark, large part of the frame black, low sharpness, lens covered, camera fault, caméra obstruée
+  causes: [objet devant l'objectif, salissure de la vitre de protection, défaut d'éclairage]
+  checks: [nettoyer la vitre de protection, vérifier l'éclairage, considérer les autres détections comme non fiables]
+  urgency: moyenne
+- id: KB-06
+  title: Balourd ou usure du ventilateur
+  symptom: fan hub wobble increasing, vibration growth, eccentric rotation, balourd, usure du palier
+  causes: [usure du roulement, encrassement des pales, desserrage du moyeu]
+  checks: [planifier un relevé vibratoire, nettoyer les pales, contrôler le serrage du moyeu, prévoir le roulement de rechange]
+  urgency: planifiable

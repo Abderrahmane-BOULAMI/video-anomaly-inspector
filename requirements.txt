@@ -1,0 +1,8 @@
+numpy>=1.26
+pandas>=2.1
+opencv-python-headless>=4.9
+scikit-learn>=1.4
+pyyaml>=6.0
+matplotlib>=3.8
+imageio>=2.34
+pytest>=8.0
